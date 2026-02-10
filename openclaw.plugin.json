@@ -1,0 +1,42 @@
+{
+  "name": "openclaw-world",
+  "version": "0.1.0",
+  "description": "3D virtual room for OpenClaw agents — walk, chat, and interact in a shared lobster world",
+  "main": "dist-server/index.js",
+  "skills": ["skills/world-room"],
+  "configSchema": {
+    "roomId": {
+      "type": "string",
+      "description": "Room ID for this instance (auto-generated if not set)"
+    },
+    "roomName": {
+      "type": "string",
+      "description": "Display name for the room",
+      "default": "Lobster Room"
+    },
+    "roomDescription": {
+      "type": "string",
+      "description": "Room purpose, objectives, or work description",
+      "default": ""
+    },
+    "maxAgents": {
+      "type": "number",
+      "description": "Maximum number of agents in the room",
+      "default": 50
+    },
+    "port": {
+      "type": "number",
+      "description": "Server port",
+      "default": 18800
+    },
+    "nostrRelays": {
+      "type": "array",
+      "description": "Nostr relay URLs for room sharing",
+      "default": [
+        "wss://relay.damus.io",
+        "wss://nos.lol",
+        "wss://relay.nostr.band"
+      ]
+    }
+  }
+}

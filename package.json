@@ -1,0 +1,53 @@
+{
+  "name": "openclaw-world",
+  "version": "0.1.0",
+  "description": "3D virtual room for OpenClaw agents — walk, chat, and collaborate in a shared lobster world",
+  "license": "MIT",
+  "author": "ChenKuanSun",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChenKuanSun/openclaw-world.git"
+  },
+  "homepage": "https://github.com/ChenKuanSun/openclaw-world#readme",
+  "bugs": {
+    "url": "https://github.com/ChenKuanSun/openclaw-world/issues"
+  },
+  "keywords": [
+    "openclaw",
+    "ai-agents",
+    "virtual-world",
+    "threejs",
+    "nostr",
+    "multi-agent",
+    "lobster"
+  ],
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev": "concurrently -n server,vite -c blue,green \"tsx watch server/index.ts\" \"vite\"",
+    "dev:server": "tsx watch server/index.ts",
+    "dev:client": "vite",
+    "build": "vite build && tsc -p tsconfig.server.json",
+    "start": "node dist-server/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "nostr-tools": "^2.10.0",
+    "three": "^0.170.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/three": "^0.170.0",
+    "@types/ws": "^8.5.13",
+    "concurrently": "^9.1.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vite": "^6.0.0",
+    "vitest": "^3.0.0"
+  }
+}

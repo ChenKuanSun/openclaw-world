@@ -1,0 +1,11 @@
+node_modules/
+dist/
+dist-server/
+*.tsbuildinfo
+profiles.json
+moltbook.json
+clawhub-catalog.json
+clawhub-installed.json
+.env
+.DS_Store
+coverage/
